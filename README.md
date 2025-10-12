@@ -7,6 +7,10 @@ This project analyzes key performance indicators (KPIs) for pizza sales using Po
 - **Objective**: Analyze pizza sales data for actionable business insights.
 - **Tools Used**: Power BI for dashboard visualizations, SQL for data extraction and transformation.
 
+## Dataset Used
+
+- https://github.com/Joshnavi-pilli/Pizza-Sales-Dashboard/blob/main/pizza_sales_excel_file.xlsx
+
 ## Dashboard Previews
 
 The dashboard includes:
