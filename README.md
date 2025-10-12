@@ -22,7 +22,12 @@ The dashboard includes:
 ## Dashboard Snapshots
 
 - ![Main Dashboard]https://github.com/Joshnavi-pilli/Pizza-Sales-Dashboard/blob/main/Screenshot%202025-05-13%20052445.png
+
+<img width="862" height="485" alt="Screenshot 2025-05-13 053135" src="https://github.com/user-attachments/assets/457c2588-8045-4739-a0f3-4e270678609b" />
+
 - ![Best/Worst Sellers]https://github.com/Joshnavi-pilli/Pizza-Sales-Dashboard/blob/main/Screenshot%202025-05-13%20053135.png
+
+<img width="814" height="494" alt="Screenshot 2025-05-13 052445" src="https://github.com/user-attachments/assets/ffc97280-9c08-43e8-98b6-7e0c9de27641" />
 
 
 ## KPIs Tracked
@@ -58,6 +63,60 @@ Data used in the dashboard was extracted with the following example SQL scripts 
   `SELECT TOP 5 pizza_name, SUM(total_price) AS total_revenue FROM pizza_sales GROUP BY pizza_name ORDER BY total_revenue DESC`
 
 - _See the full file for more queries and details._
+
+## 🍕 Pizza Sales Report Summary (Jan 15 – Dec 15)
+
+#Overall Performance:
+
+- Total Revenue: ₹817.86K
+
+- Total Orders: 21,350
+
+- Total Pizzas Sold: 49,574
+
+- Average Order Value: ₹38.31
+
+- Average Pizzas per Order: 2.32
+
+## 📅 Trends
+
+- Busiest Days: Fridays and Saturdays show the highest sales and orders.
+
+- Busiest Months: July and January record the highest total orders.
+
+- Lowest Orders: Observed during October and December.
+
+## 🍕 Sales Breakdown
+
+-  Top Pizza Category: Classic pizzas — contribute the most to total sales and revenue.
+
+- Top Pizza Size: Large pizzas account for the majority of sales (45.98%).
+
+- Top Revenue Contributors:
+
+- 1️⃣ Thai Chicken Pizza – highest revenue (43K)
+
+- 2️⃣ Barbecue Chicken Pizza – strong sales (42K)
+
+# Top Quantity & Orders: Classic Deluxe Pizza leads in total orders and quantity sold.
+
+## ⚠️ Lowest Performers
+
+-  Lowest Revenue & Orders: Brie Carre Pizza contributes the least in both revenue and quantity.
+
+- Other low sellers include Spinach Pizza and Mediterranean Pizza.
+
+## 📈 Key Insights
+
+Focus marketing and promotions on Classic and Large-size pizzas, especially Fridays, Saturdays, and summer months (July).
+
+Review and potentially redesign or discontinue low-selling pizzas like Brie Carre and Spinach varieties.
+
+Introduce combo deals or discounts during slow months (October–December) to balance sales.
+
+## ✅ Conclusion
+
+The business performs best with Classic large pizzas, particularly on weekends and mid-year months. Optimizing inventory and promotional efforts around these patterns can significantly boost sales and profitability.
 
 ## Usage
 
