@@ -1,0 +1,117 @@
+
+Creating Dashboards In Power BI using SQL
+
+select * from pizza_sales
+
+//total_revenue
+
+select sum(total_price) as total_revenue from pizza_sales
+
+// Average_order_value
+
+select sum(total_price) / count(distinct order_id) as avg_order_value from pizza_sales
+
+//Total_pizzas_sold
+
+select sum(quantity) as total_pizza_sold from pizza_sales
+
+// total_orders
+
+select count(distinct order_id) as total_orders from pizza_sales
+
+//average_pizzas_per_orders covetingintodecimal
+
+select cast(sum(quantity) as decimal(10,2)) / cast(count(distinct order_id) as decimal (10,2)) from pizza_sales
+
+//daily_trend_for_total_orders
+
+select datename(DW, order_date) as order_day, count (distinct order_id) as total_orders from pizza_sales
+group by datename(DW, order_date)
+
+//Monthly_trend_for_totalorders
+
+select datename(Month, order_date) as Month_name, count (distinct order_id) as total_orders from pizza_sales
+group by datename(Month, order_date)
+
+order by total_orders DESC
+
+//Percentage_of_sales_by_pizza_category
+
+select pizza_category, sum (total_price) * 100 / (select sum (total_price) from pizza_sales) as PCT
+from pizza_sales
+where month (order_date) = 1
+group by pizza_category
+
+to_give_column_names_for sum(total price)as total sales/total revenue and PCT,
+
+select pizza_category, sum(total_price) as total_sales, sum (total_price) * 100 / 
+(select sum (total_price) from pizza_sales where month (order_date) = 1) as PCT
+from pizza_sales
+where month (order_date) = 1
+group by pizza_category
+
+
+// Percentage_of_sales_by_pizza_size
+
+select pizza_size, cast(sum(total_price) as decimal (10,2))as total_sales, cast(sum (total_price) * 100 / 
+(select sum (total_price) from pizza_sales where month (order_date) = 1) as decimal (10,2)) as PCT
+from pizza_sales
+where datepart (quarter,order_date) = 1
+group by pizza_size
+order by PCT DESC
+
+//top5  best sellers by_revenue
+
+select TOP 5 pizza_name, sum(total_price) as total_revenue from pizza_sales
+group by pizza_name
+order by total_revenue desc
+
+//bottom 5 worst sellers by_revenue
+
+select TOP 5 pizza_name, sum(total_price) as total_revenue from pizza_sales
+group by pizza_name
+order by total_revenue ASC
+
+//top5  best sellers by_quantity
+
+select TOP 5 pizza_name, sum(quantity) as total_quantity from pizza_sales
+group by pizza_name
+order by total_quantity desc
+
+//bottom 5 worst sellers by_quantity
+
+select TOP 5 pizza_name, sum(quantity) as total_quantity from pizza_sales
+group by pizza_name
+order by total_quantity ASC
+
+//top5  best sellers by_orders
+
+select TOP 5 pizza_name, count(distinct order_id) as total_orders from pizza_sales
+group by pizza_name
+order by total_orders desc
+
+//bottom 5 worst sellers by_orders
+
+select TOP 5 pizza_name, count(distinct order_id) as total_orders from pizza_sales
+group by pizza_name
+order by total_orders ASC
+
+DAX Measures Used
+
+Total Revenue
+Total Revenue = SUM(pizza_sales[total_price])
+
+ Average Order Value
+Average Order Value = [Total Revenue] / DISTINCTCOUNT(pizza_sales[order_id])
+
+ Total Pizzas Sold
+Total Pizzas Sold = SUM(pizza_sales[quantity])
+
+ Total Orders
+Total Orders = DISTINCTCOUNT(pizza_sales[order_id])
+
+ Average Pizzas per Order
+Average Pizzas per Order = [Total Pizzas Sold] / [Total Orders]
+
+ 
+
