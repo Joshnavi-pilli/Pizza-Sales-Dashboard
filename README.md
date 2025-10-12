@@ -1,10 +1,10 @@
-# Power BI Pizza Sales Dashboard
+# 📊 Power BI Pizza Sales Dashboard
 
 This project analyzes key performance indicators (KPIs) for pizza sales using Power BI. It provides business insights by visualizing sales data, top and bottom performing products, and sales trends. The dashboard and supporting queries are inspired by real-time business requirements for data-driven decision-making.
 
 ## Project Overview
 
-- **Objective**: Analyze pizza sales data for actionable business insights.
+- 🎯 **Objective**: Analyze pizza sales data for actionable business insights.
 - **Tools Used**: Power BI for dashboard visualizations, SQL for data extraction and transformation.
 
 ## Dataset Used
@@ -19,7 +19,7 @@ The dashboard includes:
 - Daily and Monthly Trends
 - Category & Size-based Sales Analysis
 
-## Dashboard Snapshots
+## 🖼️ Dashboard Snapshots
 
 - ![Main Dashboard]https://github.com/Joshnavi-pilli/Pizza-Sales-Dashboard/blob/main/Screenshot%202025-05-13%20052445.png
 
@@ -38,7 +38,7 @@ The dashboard includes:
 4. **Total Orders**: Number of orders placed.
 5. **Average Pizzas Per Order**: Total pizzas sold divided by total orders.
 
-## Charts & Visuals
+## 📊 Charts & Visuals
 
 - **Daily Trend for Total Orders**: Visualizes patterns in daily order volume.
 - **Monthly Trend for Total Orders**: Shows monthly fluctuation in sales.
@@ -98,7 +98,7 @@ Data used in the dashboard was extracted with the following example SQL scripts 
 
 - 2️⃣ Barbecue Chicken Pizza – strong sales (42K)
 
-# Top Quantity & Orders: Classic Deluxe Pizza leads in total orders and quantity sold.
+Top Quantity & Orders: Classic Deluxe Pizza leads in total orders and quantity sold.
 
 ## ⚠️ Lowest Performers
 
