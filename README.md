@@ -17,7 +17,7 @@ The dashboard includes:
 
 ## Dashboard Snapshots
 
-- ![Main Dashboard](Screenshot-2025-05-13-053135.jpg)
+- ![Main Dashboard]https://github.com/Joshnavi-pilli/Pizza-Sales-Dashboard/blob/main/Screenshot%202025-05-13%20052445.png
 - ![Best/Worst Sellers](Screenshot-2025-05-13-052445.jpg)
 
 
